@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/estilos.css" rel="stylesheet"/>
+    <link href="./img/icono.png" rel="shortcut icon"/>
+    <script src="Validación.js"></script>
+    <title>BOOK.NET</title>
+</head>
+<body>
+        <main>     
+            <div class="bloq1">
+                <h3>Solicitud</h3>
+                <img src="../FormSolicitud/img/icono.png" class="imagen">
+                </div>              
+            <h3>Formulario Solicitud Préstamos</h3> 
+                    <form action="../FormSolicitud/index.html" class="form" id="grupo">
+                        
+                        <div class="grupo">
+                            <p>Tipo Documento:</p><select class="select-css"><span class="barra"></span> 
+                                <option>Selecciona una opción</option>
+                                <option>Cedula Ciudadanía</option>
+                                <option>Cedula Extrangeria</option>
+                                <option>Tarjeta Identidad</option>
+                                <option>Otro</option>
+                              </select>
+                            </div>                            
+                            <p class="form_error">Seleccione una opción</p>
+                        </div>
+                        <div class="grupo">
+                            <input type="Documento" name="" id="Documento" required><span class="barra"></span>
+                            <label for="">Documento</label>                    
+                        </div>
+                        <div class="grupo">
+                            <input type="NombreCompleto:" name="" id="NombreCompleto:" required><span class="barra"></span>
+                            <label for="">Nombre Completo:</label>                     
+                        </div>
+                        <div class="grupo">
+                            <input type="Telefóno:" name="" id="Telefóno:" required><span class="barra"></span>
+                            <label for="">Telefóno:</label>                   
+                        </div>
+                        <div class="grupo">
+                            <input type="Email:" name="" id="Email:" required><span class="barra"></span>
+                            <label for="">Email:</label>               
+                        </div>
+                        <div class="grupo">
+                            <input type="TituloLibro:" name="" id="TituloLibro:" required><span class="barra"></span>
+                            <label for="">Titulo Libro:</label>                    
+                        </div>                        
+                        <div class="grupo">
+                            <input type="CódigoISBN:" name="" id="CódigoISBN:" required><span class="barra"></span>
+                            <label for="">Código ISBN:</label>                 
+                        </div>
+                        <div class="grupo">
+                            <input type="Cantidad:" name="" id="Cantidad:" required><span class="barra"></span>
+                            <label for="">Cantidad:</label> 
+                            <p class="form_error">Cantidad no autorizada, solo puede elegir máximo 5 libros.</p>                       
+                        </div>
+                        <div class="grupo">
+                            <input type="FechaEntrega:" name="" id="FechaEntrega:" required><span class="barra"></span>
+                            <label for="">Fecha Entrega:</label><span class="barra"></span>                  
+                        </div>
+
+                        <form>
+                            <button type="submit" onclick="hizoClick()">ENVIAR</button>
+       
+                            <script>
+                            function hizoClick() {
+                              if (document.getElementById("Documento").value.length<5) {
+                                return false;
+                              }
+                              if (document.getElementById("NombreCompleto:").value=="") {
+                                return false;
+                              }
+                              if (document.getElementById("Telefóno:").value.length<5) {
+                                return false;
+                              }
+                              if (document.getElementById("Email:").value=="") {
+                                return false;
+                              }
+                              if (document.getElementById("TituloLibro:").value=="") {
+                                return false;
+                              }
+                              if (document.getElementById("CódigoISBN:").value.length<5) {
+                                return false;
+                              }
+                              if (document.getElementById("Cantidad:").value.length<5) {
+                                return false;
+                              }
+                              if (document.getElementById("FechaEntrega:").value.length<10) {
+                                return false;
+                              } else {
+                                alert("Solicitud Creada Exitosamente");
+                              }
+                                return true;
+}
+                            </script>   
+                        </form>             
+                </form>            
+        </main>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="../FormRegistro/Validaciones.js"></script>
+</body>
+</html>

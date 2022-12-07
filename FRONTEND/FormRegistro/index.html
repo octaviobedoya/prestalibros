@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/estilos.css" rel="stylesheet"/>
+    <link href="./img/icono.png" rel="shortcut icon"/>
+    <title>BOOK.NET</title>
+</head>
+<body>
+        <main>           
+            <h3>Formulario Registro</h3> 
+                    <form action="" class="form" id="form">
+                        <div class="form_grupo" id="grupo_tipo">
+                        <label for="tipo" class="form_label">Tipo Documento:</label>
+                            <div class="form_input">
+                                <!--<select class="input_form">-->
+                                    <option value="">Seleccionar</option>
+                                    <option value="">Cedula Ciudadanía</option>
+                                    <option value="">Cedula Extrangeria</option>
+                                    <option value="">Tarjeta Identidad</option>  
+                                    <option value="">Otro</option>                          
+                                </select>
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div>                            
+                            <p class="form_error">Seleccione una opción</p>
+                        </div>
+                        <div class="form_grupo" id="grupo_doc">
+                            <label for="doc" class="form_label">N° Documento:</label>
+                            <div class="form_input">
+                                <input type="number" class="input_form" name="doc" id="doc">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_nombre">
+                            <label for="nombre" class="form_label">Nombre Completo:</label>
+                            <div class="form_input">
+                                <input type="text" class="input_form" name="nombre" id="nombre">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_phone">
+                            <label for="phone" class="form_label">N° Telefóno:</label>
+                            <div class="form_input">
+                                <input type="number" class="input_form" name="phone" id="phone">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_direccion">
+                            <label for="direccion" class="form_label">Dirección:</label>
+                            <div class="form_input">
+                                <input type="text" class="input_form" name="direccion" id="direccion">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_email">
+                            <label for="email" class="form_label">Email:</label>
+                            <div class="form_input">
+                                <input type="email" class="input_form" name="email" id="email">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_tipousu">
+                        <label for="tipo" class="form_label">Tipo Usuario:</label>
+                        <div class="form_input">
+                            <!--<select class="input_form">-->
+                                <option value="">Seleccionar</option>
+                                <option value="">Docente</option>
+                                <option value="">Estudiante</option>                        
+                            </select>
+                            <i class="form_validacion fas fa-times-circle"></i>
+                        </div>                            
+                            <p class="form_error">Seleccione una opción</p>
+                        </div>
+                        <div class="form_grupo" id="grupo_user">
+                            <label for="user" class="form_label">Usuario:</label>
+                            <div class="form_input">
+                                <input type="text" class="input_form" name="user" id="user">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">Ingrese un valor permitido.</p>                       
+                        </div>
+                        <div class="form_grupo" id="grupo_pass">
+                            <label for="pass" class="form_label">Contraseña:</label>
+                            <div class="form_input">
+                                <input type="password" class="input_form" name="pass" id="pass">
+                                <i class="form_validacion fas fa-times-circle"></i>
+                            </div> 
+                            <p class="form_error">La contraseña debe contener 4 a 6 digitos.</p>                       
+                        </div>
+                        <div>
+
+                        </div>
+
+                        <div class="form_mensaje" id="form_mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Diligenciar el formulario completamente.</p>
+                        </div>
+                        <div class="form_grupo form_save">
+                            <button type="submit" class="save">Enviar</button>
+                            <p class="mensaje_exito">Registro Creado Exitosamente</p>
+                        </div>                        
+                    </form>            
+        </main>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="../FormRegistro/Validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #e5e5e5;
+}
+
+main{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+img{
+    height: 65px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form_label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form_input{
+    position: relative;
+}
+.input_form{
+    width: 90%;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px 0 10px;
+    transition: .3s ease all;
+}
+
+.input_form:focus{
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+.form_error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form_error-activo{
+    display: block;
+}
+
+.form_validacion{
+    position:absolute;
+    right: 10px;
+    bottom: 8px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.form_mensaje,
+.save{
+    grid-column: span 2;
+}
+
+.form_mensaje{
+    height: 35px;
+    line-height: 35px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.form_mensaje-activo{
+    display: block;
+}
+.form_mensaje p {
+    margin: 0;
+}
+
+.save{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.save{
+    height: 35px;
+    line-height: 30px;
+    width: 20%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.save:hover{
+    box-shadow: 3px 0px 3px rgba(163,163,163,1);
+}
+
+.mensaje_exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.mensaje_exito-activo{
+    display: block;
+}
+
+.form_grupo-correcto .form_validacion {
+    color: #1ed12d ;
+    opacity: 1;
+}
+
+.form_grupo-incorrecto .form_label {
+    color: #bb2929;    
+}
+
+.form_grupo-incorrecto .form_validacion{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.form_grupo-incorrecto .input_form{
+   border: 3px solid #bb2929;
+}
+button{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height:40px ;
+    background-color: #f12711;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: black;
+}
+
+.select-css {
+    display: block;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.3;
+    padding: .4em 1.4em .3em .8em;
+    width: 400px;
+    max-width: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+    border-radius: 60px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+   }
+   .select-css::-ms-expand {
+    display: none;
+   }
+   .select-css:hover {
+    border-color: #888;
+   }
+   .select-css:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;
+   }
+   .select-css option {
+    font-weight:normal;
+   }
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+form{
+    position: absolute;
+    min-width: 280px;
+    max-width: 55%;
+    width: 55%;
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    box-shadow: 0 1rem 2rem  rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1rem);
+    border-radius: 10px;
+    color: black;
+}
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px ;
+}
+
+h1{
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 7px;
+}
+input{
+    display: inline;
+    width: 100%;
+    height: 15px;
+    padding: 10px 15px;
+    margin-bottom: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+
+}
+input:focus{ 
+    outline: none;
+    color: black;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 12.5px;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12.5px;
+    color: #f12711;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #f12711, #f5af19);
+    transition: 0.9s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+    width: 50%;
+}
+button{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height:40px ;
+    background-color: #f5af19;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: black;
+}
+.imagen2
+{
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.imagen2 img
+{
+    position: absolute;
+    min-width: 130px;
+    max-width: 10%;
+    width: 10%;
+    top: 15%;
+    left: 44%;
+}
+.imagen2 h2
+{
+    position: absolute;
+    min-width: 280px;
+    max-width: 10%;
+    width: 10%;
+    top: 26%;
+    left: 46.7%;
+}
+
+@media screen and (max-width: 800px){
+    
+    .form{
+        grid-template-columns: 1fr;
+    }
+    
+    .form_mensaje,
+    .save{
+    grid-column: span 1;
+    }
+
+}   
